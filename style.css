@@ -1,0 +1,15 @@
+body {
+          background-color: #f1f6ef;
+          text-align: center; /* Centers your logo, search bar, and text */
+      }
+      .logo-img {
+          max-height: 100px;
+          width: auto;       /* Keeps the logo aspect ratio perfect */
+          margin-top: 40px;
+          display: inline-block;
+      }
+      .search-wrapper {
+          max-width: 400px;  /* Brought down from 800px for a cleaner search look */
+          margin: 20px auto 0 auto;
+          padding: 0 20px;   /* Fixed padding to prevent squishing on mobile screens */
+      }
