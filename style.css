@@ -1,15 +1,71 @@
+/* ==========================================================================
+   1. GLOBAL / DEFAULT BASE LAYOUT (Mobile Viewports: Under 768px wide)
+   ========================================================================== */
 body {
-          background-color: #f1f6ef;
-          text-align: center; /* Centers your logo, search bar, and text */
-      }
-      .logo-img {
-          max-height: 100px;
-          width: auto;       /* Keeps the logo aspect ratio perfect */
-          margin-top: 40px;
-          display: inline-block;
-      }
-      .search-wrapper {
-          max-width: 400px;  /* Brought down from 800px for a cleaner search look */
-          margin: 20px auto 0 auto;
-          padding: 0 20px;   /* Fixed padding to prevent squishing on mobile screens */
-      }
+    background-color: #f1f6ef;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 15px;
+}
+
+.logo-img {
+    max-height: 60px; /* Smaller logo so it fits mobile screens cleanly */
+    width: auto;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.search-wrapper {
+    width: 100%;
+    max-width: 100%; /* Spans full width on small mobile screens */
+    margin: 15px auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+/* Adjusts the native Google Search text size for mobile results */
+.gcse-search {
+    font-size: 14px;
+}
+
+
+/* ==========================================================================
+   2. VTECH GENIO LAPTOP LAYOUT (Viewports: 768px to 1280px wide)
+   ========================================================================== */
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+    body {
+        padding: 30px;
+    }
+
+    .logo-img {
+        max-height: 75px; /* Scaled medium size perfect for a 7" 720p display */
+        margin-top: 30px;
+    }
+
+    .search-wrapper {
+        max-width: 550px; /* Snug width tailored for the Genio screen profile */
+        margin: 20px auto;
+        padding: 0 15px;
+    }
+}
+
+
+/* ==========================================================================
+   3. STANDARD DESKTOP LAYOUT (Viewports: Greater than 1280px wide)
+   ========================================================================== */
+@media screen and (min-width: 1281px) {
+    body {
+        padding: 50px;
+    }
+
+    .logo-img {
+        max-height: 100px; /* Large crisp logo on regular monitors */
+        margin-top: 50px;
+    }
+
+    .search-wrapper {
+        max-width: 750px; /* Expands to utilize standard screen real estate */
+        margin: 25px auto;
+        padding: 0;
+    }
+}
