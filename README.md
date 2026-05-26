@@ -1,2 +1,4 @@
 # w3stm1nst3r.github.io
-...an search engine by westmynster
+...a custom search engine by Westmynster and Google
+
+
