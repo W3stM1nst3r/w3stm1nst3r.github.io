@@ -1,4 +1,4 @@
 # w3stm1nst3r.github.io
-...a custom search engine by Westmynster and Google
+...a search engine by Westmynster
 
-
+# W3stmynster / Google
