@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-        <style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 S-Engine Home</title>
+    
+    <style>
       /* ==========================================================================
          1. GLOBAL / DEFAULT BASE LAYOUT (Mobile Viewports: Under 768px wide)
          ========================================================================== */
@@ -9,7 +13,7 @@
           background-color: #f1f6ef;
           font-family: Arial, sans-serif;
           text-align: center;
-          padding: 10px; /* Small outer padding for mobile edges */
+          padding: 10px; /* Small padding for mobile edges */
           margin: 0;
       }
 
@@ -20,21 +24,22 @@
           display: inline-block;
       }
 
-      /* Fix: This expands the wrapper so mobile results aren't squished */
+      /* FIX: Removed the 100px padding so mobile results aren't squished! */
       .search-wrapper {
           width: 100%;
           max-width: 100%;
           margin: 15px auto;
-          padding: 0; /* REMOVED the 100px padding causing the compression bug */
+          padding: 0; 
           box-sizing: border-box;
       }
 
-      /* Forces Google's internal layout elements to match the fluid layout */
+      /* Forces Google's internal layout elements to match the fluid mobile layout */
       #___gcse_0, .gcse-search {
           width: 100% !important;
           max-width: 100% !important;
           margin: 0 auto !important;
       }
+
 
       /* ==========================================================================
          2. VTECH GENIO LAPTOP LAYOUT (Viewports: 768px to 1024px wide)
@@ -45,7 +50,7 @@
           }
 
           .logo-img {
-              max-height: 75px; /* Scaled medium size for the 7" display */
+              max-height: 75px; /* Scaled medium size for the Genio display */
               margin-top: 30px;
           }
 
@@ -53,6 +58,7 @@
               max-width: 550px !important; /* Constrains layout width on laptop */
           }
       }
+
 
       /* ==========================================================================
          3. STANDARD DESKTOP LAYOUT (Viewports: Greater than 1024px wide)
@@ -76,13 +82,13 @@
   <body>
     
     <!-- GOOGLE ENGINE SCRIPT -->
-    <script async src="https://cse.google.com/cse.js?cx=b09fcdac1f01b4622"></script>
+    <script async src="https://google.com"></script>
         
     <!-- SEARCH CONTAINER -->
     <div class="search-wrapper">
         
-        <!-- Fix: Set class to "logo-img" so your CSS height rule actually applies -->
-        <img class="logo-img" src="https://i.postimg.cc/Hs2hsq3c/4-S-Engine-16-5-2026.png" alt="4 S-Engine Logo">
+        <!-- Logo Image -->
+        <img class="logo-img" src="https://postimg.cc" alt="4 S-Engine Logo">
       
         <!-- Google Search Bar -->
         <div class="gcse-search"></div>
@@ -92,5 +98,6 @@
             <em>...a search engine by Westmynster</em>
         </h4>
     </div>
+    
   </body>
 </html>
