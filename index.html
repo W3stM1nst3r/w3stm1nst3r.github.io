@@ -106,32 +106,34 @@
     border-top: none !important;
     box-shadow: none !important;
 }
-      }
-          /* ==========================================================================
-   LAPTOP ALIGNMENT FIX (Forces elements to center perfectly)
+        /* ==========================================================================
+   PERFECT CENTERING ALIGNMENT (Fixes the off-center micro-gaps)
    ========================================================================== */
-/* Centers the inner search bar form element */
+/* Fixes the uneven 16px right-side margin that shifts the bar to the left */
 .gsc-search-box-tools .gsc-search-box {
-    margin: 0 auto !important;
+    padding-right: 0 !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
     width: 100% !important;
 }
 
-/* Forces the input text table cell to align with the button cell */
-table.gsc-search-box td {
-    vertical-align: middle !important;
+/* Forces the input field container to span perfectly evenly */
+td.gsc-input {
+    padding-right: 0 !important;
+    margin: 0 !important;
 }
 
-/* Wipes out any weird left or right text alignment inside the main layout frame */
+/* Aligns the search container's main boundary box straight down the middle */
 .gsc-control-cse {
-    text-align: center !important;
-}
-
-/* Keeps the result tab links centered across the page */
-.gsc-tabsArea {
-    display: flex !important;
-    justify-content: center !important;
+    padding: 0 !important;
     margin: 0 auto !important;
 }
+
+/* Centers the Google branding text if it appears under the input bar */
+.gcsc-branding {
+    display: none !important; /* Hides the uneven Google logo label entirely */
+}
+      }
     </style>
   </head>
   <body>
