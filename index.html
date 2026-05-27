@@ -77,27 +77,34 @@
     background-color: transparent !important;
     background: transparent !important;
     border: none !important;
-    box-shadow: none !important;
+    box-shadow: none 
 }
         /* ==========================================================================
-   WIPE AWAY ONLY THE TABS BOX AND THE BORDER LINES
+   FORCE WIPE THE REFINEMENT TABS BACKGROUND & INTER-RESULT LINES
    ========================================================================== */
-/* 1. Removes the light background box from behind the tabs link row */
-.gsc-results-wrapper-visible > div:first-child,
-.gsc-tabsArea,
-.gsc-tabsAreaV2 {
+/* 1. Kills the background box behind Ebay, Amazon, TikTok, YouTube links */
+.gsc-tabsArea, 
+.gsc-tabsAreaV2, 
+.gsc-refinementHeader, 
+.gsc-refinementHeaderV2,
+.gsc-results-wrapper-visible > div,
+[role="tablist"] {
     background: transparent !important;
     background-color: transparent !important;
     border: none !important;
+    box-shadow: none !important;
 }
 
-/* 2. Removes the grey lines/borders between the different search results */
-.gsc-webResult.gsc-result,
+/* 2. Kills the gray divider lines running between individual search results */
+.gsc-webResult, 
+.gsc-result, 
 .gsc-imageResult,
-.gsc-results .gsc-webResult {
+.gsc-results,
+.gsc-webResult.gsc-result {
     border: none !important;
     border-bottom: none !important;
-    padding-bottom: 10px !important;
+    border-top: none !important;
+    box-shadow: none !important;
 }
       }
     </style>
