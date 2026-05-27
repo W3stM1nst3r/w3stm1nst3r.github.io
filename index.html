@@ -5,54 +5,78 @@
     <title>4 S-Engine Home</title>
         <style>
 /* ==========================================================================
-   4 S-ENGINE FRESH RESTART: PERFECT CENTERING & BACKGROUND ONLY
+   4 S-ENGINE ULTIMATE FRESH START (BACKGROUND & PERFECT ALIGNMENT ONLY)
    ========================================================================== */
 
-/* 1. Sets background color and centers everything on the screen */
+/* Sets your background color and clears any browser margin gaps */
 body {
     background-color: #f1f6ef !important;
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 40px 20px;
-    
-    /* Flexbox layout to force perfect centering down the middle */
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
+    padding: 30px 15px;
+}
+
+/* Master alignment container - locks everything straight down the center line */
+.search-wrapper {
+    width: 100%;
+    max-width: 600px; /* Snug desktop size so it looks neat and professional */
+    margin: 0 auto;
+    box-sizing: border-box;
     text-align: center;
 }
 
-/* 2. Keeps your layout container perfectly centered and sized */
-.search-wrapper {
-    width: 100%;
-    max-width: 750px;
-    margin: 0 auto;
-    
+/* Logo image constraints to keep it nicely proportioned */
+.logo-img {
+    width: 80%;
+    max-width: 380px;
+    height: auto;
+    margin: 30px auto 20px auto;
+    display: block;
+}
+
+/* THE CUSTOM SEARCH INPUT: Perfect row alignment with zero invisible margins */
+.custom-search-form {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 100%;
+    border: 2px solid #1b2516;
+    border-radius: 24px; /* Smooth rounded search bar style */
+    overflow: hidden;
+    background: #ffffff;
+    margin: 0 auto;
 }
 
-/* 3. Forces Google's outer framework boxes to align perfectly straight */
-#___gcse_0, 
-.gcse-search, 
-.gsc-control-cse {
+/* Inner input field box styling */
+.search-input {
+    flex: 1;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    outline: none;
+}
+
+/* Matching search submission button */
+.search-button {
+    background-color: #1b2516;
+    color: #ffffff;
+    border: none;
+    padding: 0 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Clean text alignment for your footer message */
+.footer-text {
+    font-family: Trebuchet MS, sans-serif; 
+    color: #1b2516; 
+    margin-top: 25px;
+}
+
+/* Forces Google's results frame to use the clean layout lines */
+.gcse-searchresults-only {
     width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 auto !important;
-    padding: 0 !important;
-    background-color: transparent !important;
-    border: none !important;
-}
-
-/* 4. Fixes Google's crooked table offsets so the search bar sits dead center */
-table.gsc-search-box {
-    margin: 0 auto !important;
-    width: 100% !important;
-}
-
-td.gsc-input {
-    padding-right: 0 !important; /* Removes the hidden gap that makes it crooked */
+    margin-top: 30px !important;
+    text-align: left !important;
 }
     </style>
   </head>
