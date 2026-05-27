@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=1024">
     <title>4 S-Engine Home</title>
-    
     <style>
       /* ==========================================================================
          1. BASE SYSTEM (Clean and Centered Everywhere)
@@ -40,6 +39,39 @@
           width: 100% !important;
           max-width: 100% !important;
           margin: 0 auto !important;
+      }
+
+      /* ==========================================================================
+         2. FORCE GOOGLE TO ALIGN PERFECTLY WITH THE LOGO
+         ========================================================================== */
+      /* Wipes out Google's default uneven border box padding */
+      .gsc-control-cse, .gsc-control-cse * {
+          box-sizing: border-box !important;
+      }
+
+      /* Centers Google's invisible background grid */
+      .gsc-control-cse {
+          background-color: transparent !important;
+          border: none !important;
+          padding: 0 !important;
+          margin: 0 auto !important;
+          width: 100% !important;
+      }
+
+      /* Centers the actual form block */
+      form.gsc-search-box, table.gsc-search-box {
+          margin: 0 auto !important;
+          width: 100% !important;
+      }
+
+      /* Removes the default right-side padding gap Google adds to the input box */
+      td.gsc-input {
+          padding-right: 0 !important;
+      }
+
+      /* Centers the magnifying glass button inside its cell */
+      td.gsc-search-button {
+          vertical-align: middle !important;
       }
     </style>
   </head>
