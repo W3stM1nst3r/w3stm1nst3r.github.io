@@ -4,39 +4,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>4 S-Engine Home</title>
         <style>
-/* ==========================================================================
-   4 S-ENGINE BASICS: BACKGROUND & PERFECT GOOGLE BAR CENTERING
-   ========================================================================== */
-
-/* 1. Sets background color and centers the base text flow */
-body {
-    background-color: #f1f6ef !important;
-    text-align: center;
-    margin: 0;
-    padding: 40px 20px;
+/* Custom logo sizing - wide on mobile, clean on desktop */
+.logo-img {
+    width: 85% !important;     
+    max-width: 420px !important; 
+    height: auto !important;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    display: inline-block;
 }
 
-/* 2. Standard layout wrapper centered horizontally */
-.search-wrapper {
-    width: 100%;
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-/* 3. Forces the real Google framework structures to align dead center */
-#___gcse_0, 
-.gcse-search, 
-.gsc-control-cse, 
-table.gsc-search-box {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 auto !important;
-    padding: 0 !important;
+/* Wipes out all the dirty background boxes around the Google bar */
+#___gcse_0, .gcse-search, .gsc-control-cse {
+    background-color: transparent !important;
     background: transparent !important;
     border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
 }
 
-/* 4. Erases the asymmetrical side gap that makes the input row lean left */
+/* Centers the inner table perfectly under your logo */
+table.gsc-search-box {
+    margin: 0 auto !important;
+    width: 100% !important;
+}
+
+/* Fixes the crooked right-side padding gap */
 td.gsc-input {
     padding-right: 0 !important;
 }
