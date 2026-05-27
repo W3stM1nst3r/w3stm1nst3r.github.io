@@ -79,6 +79,26 @@
     border: none !important;
     box-shadow: none !important;
 }
+        /* ==========================================================================
+   WIPE AWAY ONLY THE TABS BOX AND THE BORDER LINES
+   ========================================================================== */
+/* 1. Removes the light background box from behind the tabs link row */
+.gsc-results-wrapper-visible > div:first-child,
+.gsc-tabsArea,
+.gsc-tabsAreaV2 {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+}
+
+/* 2. Removes the grey lines/borders between the different search results */
+.gsc-webResult.gsc-result,
+.gsc-imageResult,
+.gsc-results .gsc-webResult {
+    border: none !important;
+    border-bottom: none !important;
+    padding-bottom: 10px !important;
+}
       }
     </style>
   </head>
