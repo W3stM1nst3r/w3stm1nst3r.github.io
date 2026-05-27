@@ -1,78 +1,64 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=1024">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>4 S-Engine Home</title>
-    
-    <style>
+        <style>
       /* ==========================================================================
-   1. BASE LAYOUT & DESKTOP (Default layout configuration)
-   ========================================================================== */
-body {
-    background-color: #f1f6ef !important;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 40px;
-    margin: 0;
-}
+         1. BASE SYSTEM (Applies to all devices so they match your desktop layout)
+         ========================================================================== */
+      body {
+          background-color: #f1f6ef !important;
+          font-family: Arial, sans-serif;
+          text-align: center;
+          margin: 0;
+          padding: 20px;
+      }
 
-/* Big custom logo exactly as requested in your picture */
-.logo-img {
-    width: 85% !important;
-    max-width: 420px !important;
-    height: auto !important;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    display: inline-block;
-}
+      /* Wrapper layout box - keeps the design wide and elegant everywhere */
+      .search-wrapper {
+          display: grid;
+          grid-template-columns: 1fr;
+          justify-items: center;
+          width: 100%;
+          max-width: 750px; /* Locks the desktop layout width so it never squishes */
+          margin: 0 auto;
+          box-sizing: border-box;
+      }
 
-/* Beautiful wide layout container to prevent text compressing */
-.search-wrapper {
-    width: 100%;
-    max-width: 750px;
-    margin: 0 auto;
-    padding: 0;
-    box-sizing: border-box;
-}
+      /* Forces Google CSE frame to stay wide and expansive */
+      #___gcse_0, .gcse-search {
+          width: 100% !important;
+          max-width: 100% !important;
+      }
 
-/* Forces Google CSE layout blocks to follow desktop width rules */
-#___gcse_0, .gcse-search {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 auto !important;
-}
+      /* ==========================================================================
+         2. MOBILE DEVICE RULES (Forces the big logo look from your drawing)
+         ========================================================================== */
+      @media screen and (max-width: 767px) {
+          .logo-img {
+              width: 90% !important;     /* Blows the logo up massive on phones */
+              max-width: 450px !important;
+              height: auto !important;
+              margin: 40px auto 25px auto;
+          }
+          
+          .search-wrapper {
+              padding: 0 10px; /* Prevents edge cutting while remaining wide */
+          }
+      }
 
-
-/* ==========================================================================
-   2. MOBILE ZOOM RULES (Only targets phone screens under 767px)
-   ========================================================================== */
-@media screen and (max-width: 767px) {
-    html {
-        /* Zooms the layout components on phones to match your design */
-        zoom: 115%; 
-        -moz-transform: scale(1.15); /* Firefox zoom fallback fix */
-        -moz-transform-origin: top center;
-    }
-    
-    body {
-        padding: 15px; /* Tighter margins for mobile device frame edges */
-    }
-}
-
-
-/* ==========================================================================
-   3. VTECH GENIO LAPTOP SPECIFIC SCALE (Keeps layout at standard 100%)
-   ========================================================================== */
-@media screen and (min-width: 768px) and (max-width: 1280px) {
-    body {
-        padding: 25px;
-    }
-
-    .search-wrapper {
-        max-width: 600px; /* Snug, clean sizing tailored for the Genio screen */
-    }
-}
+      /* ==========================================================================
+         3. LAPTOP & DESKTOP RULES (Keeps the layout standard)
+         ========================================================================== */
+      @media screen and (min-width: 768px) {
+          .logo-img {
+              max-height: 100px !important; /* Standard crisp desktop logo size */
+              width: auto !important;
+              margin: 50px auto 30px auto;
+          }
+      }
     </style>
+
   </head>
   <body>
     
