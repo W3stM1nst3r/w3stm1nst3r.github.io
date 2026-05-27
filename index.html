@@ -43,6 +43,35 @@ body {
     margin: 0 auto !important;
     text-align: center !important;
 }
+          /* ==========================================================================
+   THE SEARCH BAR AND RESULTS PERFECT CENTER SNIPPET
+   ========================================================================== */
+/* Centers the inner search bar input elements */
+.gsc-search-box-tools .gsc-search-box {
+    margin: 0 auto !important;
+    width: 100% !important;
+}
+
+/* Centers the refinement tabs links (Ebay, Amazon, YouTube) */
+.gsc-tabsArea, .gsc-tabsAreaV2, [role="tablist"] {
+    display: flex !important;
+    justify-content: center !important;
+    margin: 0 auto 15px auto !important;
+}
+
+/* Centers the search results content blocks underneath */
+.gsc-results-wrapper-visible, .gsc-results, .gsc-webResult {
+    text-align: center !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+}
+
+/* Forces individual result snippets to text-align cleanly */
+.gs-webResult, .gs-result {
+    text-align: left !important; /* Keeps actual text readable while centered */
+    margin: 0 auto 15px auto !important;
+    max-width: 600px !important;
+}
     </style>
   </head>
  <body>
