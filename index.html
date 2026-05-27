@@ -4,106 +4,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>4 S-Engine Home</title>
         <style>
-/* ==========================================================================
-   4 S-ENGINE ULTIMATE FRESH START (BACKGROUND & PERFECT ALIGNMENT ONLY)
-   ========================================================================== */
+  /* 1. Sets your green background and centers the base page layout */
+  body {
+      background-color: #f1f6ef !important;
+      margin: 0;
+      padding: 40px 20px;
+      text-align: center; /* Centers your logo and text */
+  }
 
-/* Sets your background color and clears any browser margin gaps */
-body {
-    background-color: #f1f6ef !important;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 30px 15px;
-}
+  /* 2. Forces your search box container to align straight down the center line */
+  .search-wrapper {
+      width: 100%;
+      max-width: 700px; /* Standard wide desktop width */
+      margin: 0 auto;  /* Centers the block container horizontally */
+  }
 
-/* Master alignment container - locks everything straight down the center line */
-.search-wrapper {
-    width: 100%;
-    max-width: 600px; /* Snug desktop size so it looks neat and professional */
-    margin: 0 auto;
-    box-sizing: border-box;
-    text-align: center;
-}
+  /* 3. Forces Google's hidden framework tables to align perfectly center */
+  #___gcse_0, .gcse-search, .gsc-control-cse, table.gsc-search-box {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 auto !important; /* Wipes out any crooked left/right leaning */
+      padding: 0 !important;
+  }
 
-/* Logo image constraints to keep it nicely proportioned */
-.logo-img {
-    width: 80%;
-    max-width: 380px;
-    height: auto;
-    margin: 30px auto 20px auto;
-    display: block;
-}
-
-/* THE CUSTOM SEARCH INPUT: Perfect row alignment with zero invisible margins */
-.custom-search-form {
-    display: flex;
-    width: 100%;
-    border: 2px solid #1b2516;
-    border-radius: 24px; /* Smooth rounded search bar style */
-    overflow: hidden;
-    background: #ffffff;
-    margin: 0 auto;
-}
-
-/* Inner input field box styling */
-.search-input {
-    flex: 1;
-    border: none;
-    padding: 12px 20px;
-    font-size: 16px;
-    outline: none;
-}
-
-/* Matching search submission button */
-.search-button {
-    background-color: #1b2516;
-    color: #ffffff;
-    border: none;
-    padding: 0 25px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-/* Clean text alignment for your footer message */
-.footer-text {
-    font-family: Trebuchet MS, sans-serif; 
-    color: #1b2516; 
-    margin-top: 25px;
-}
-
-/* Forces Google's results frame to use the clean layout lines */
-.gcse-searchresults-only {
-    width: 100% !important;
-    margin-top: 30px !important;
-    text-align: left !important;
-}
+  /* 4. Fixes the invisible right-side gap that makes the bar look crooked */
+  td.gsc-input {
+      padding-right: 0 !important;
+  }
     </style>
   </head>
-  <body>
-
+ <body>
+    <script async src="https://cse.google.com/cse.js?cx=b09fcdac1f01b4622"></script>
     <div class="search-wrapper">
-        <!-- 1. Your Logo Graphic -->
         <img class="logo-img" src="https://i.postimg.cc/Hs2hsq3c/4-S-Engine-16-5-2026.png" alt="4 S-Engine Logo">
-        
-        <!-- 2. Clean, Custom Search Bar (Perfectly Centered and Aligned) -->
-        <form action="" method="get" class="custom-search-form">
-            <input type="text" name="q" placeholder="Search 4 S-Engine..." class="search-input">
-            <button type="submit" class="search-button">Search</button>
-        </form>
-
-        <!-- 3. Your Footer Label Text -->
-        <h4 class="footer-text"> 
+        <div class="gcse-search"></div>
+        <h4 style="font-family: Trebuchet MS, sans-serif; color: #1b2516;"> 
             <em>...a search engine by Westmynster</em>
         </h4>
-
-        <!-- 4. Real Google Results Area (Kept hidden until you search) -->
-        <div class="gcse-searchresults-only"></div>
     </div>
-
-    <!-- The Correct Google Engine Script Link -->
-    <script async src="https://cse.google.com/cse.js?cx=b09fcdac1f01b4622"></script>
-
 </body>
-
 </html>
