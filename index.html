@@ -2,121 +2,95 @@
 <html>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>4 S-Engine Home</title>
-        <style>
-      /* ==========================================================================
-         1. BASE SYSTEM (Applies to all devices so they match your desktop layout)
-         ========================================================================== */
-      body {
-          background-color: #f1f6ef !important;
-          font-family: Arial, sans-serif;
-          text-align: center;
-          margin: 0;
-          padding: 20px;
-      }
+<style>
+    body {
+        background-color: #f1f6ef !important;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 20px;
+    }
 
-      /* Wrapper layout box - keeps the design wide and elegant everywhere */
-      .search-wrapper {
-          display: grid;
-          grid-template-columns: 1fr;
-          justify-items: center;
-          width: 100%;
-          max-width: 750px; /* Locks the desktop layout width so it never squishes */
-          margin: 0 auto;
-          box-sizing: border-box;
-      }
+    .search-wrapper {
+        width: 100%;
+        max-width: 700px; /* Keeps everything locked in a clean desktop width */
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
 
-      /* Forces Google CSE frame to stay wide and expansive */
-      #___gcse_0, .gcse-search {
-          width: 100% !important;
-          max-width: 100% !important;
-      }
+    /* Massive mobile logo, normal desktop logo */
+    .logo-img {
+        width: 85% !important;
+        max-width: 420px !important;
+        height: auto !important;
+        margin: 40px auto 25px auto;
+        display: inline-block;
+    }
 
-      /* ==========================================================================
-         2. MOBILE DEVICE RULES (Forces the big logo look from your drawing)
-         ========================================================================== */
-      @media screen and (max-width: 767px) {
-          .logo-img {
-              width: 90% !important;     /* Blows the logo up massive on phones */
-              max-width: 450px !important;
-              height: auto !important;
-              margin: 40px auto 25px auto;
-          }
-          
-          .search-wrapper {
-              padding: 0 10px; /* Prevents edge cutting while remaining wide */
-          }
-      }
+    /* CUSTOM BAR: Perfectly aligned and uniform */
+    .custom-search-form {
+        display: flex;
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        border: 2px solid #1b2516;
+        border-radius: 24px; /* Gives it smooth round search edges */
+        overflow: hidden;
+        background: #ffffff;
+    }
 
-      /* ==========================================================================
-         3. LAPTOP & DESKTOP RULES (Keeps the layout standard)
-         ========================================================================== */
-      @media screen and (min-width: 768px) {
-          .logo-img {
-              max-height: 100px !important; /* Standard crisp desktop logo size */
-              width: auto !important;
-              margin: 50px auto 30px auto;
-          }
-        /* ==========================================================================
-   4. CLEAN UP GOOGLE'S MESS (Fixes unaligned bar & sloppy layout)
-   ========================================================================== */
-/* Force Google's main container to center perfectly */
-.gsc-control-cse, .gsc-control-cse * {
-    box-sizing: border-box !important;
-}
+    .search-input {
+        flex: 1;
+        border: none;
+        padding: 12px 20px;
+        font-size: 16px;
+        outline: none;
+    }
 
-.gsc-control-cse {
-    background-color: transparent !important;
-    border: none !important;
-    padding: 0 !important;
-    margin: 0 auto !important;
-    width: 100% !important;
-}
+    .search-button {
+        background-color: #1b2516;
+        color: #ffffff;
+        border: none;
+        padding: 0 25px;
+        font-size: 16px;
+        cursor: pointer;
+        font-weight: bold;
+    }
 
-/* Centers the form wrapper box */
-form.gsc-search-box {
-    margin: 0 auto !important;
-    width: 100% !important;
-}
+    .search-button:hover {
+        background-color: #33442c;
+    }
 
-/* Fixes unaligned input text and search box table cells */
-table.gsc-search-box {
-    margin: 0 auto !important;
-    width: 100% !important;
-}
-
-td.gsc-input {
-    padding-right: 0 !important; /* Removes Google's uneven side gap */
-}
-
-/* Centers any extra text or results branding below the bar */
-.gcsc-branding, .gsc-branding {
-    display: flex !important;
-    justify-content: center !important;
-    margin: 10px auto !important;
-}
-      }
-    </style>
-
+    /* Fixes Google's injected result layout box styling */
+    .gcse-searchresults-only {
+        width: 100% !important;
+        margin-top: 30px !important;
+        text-align: left !important;
+    }
+</style>
   </head>
   <body>
-    
-    <!-- GOOGLE ENGINE SCRIPT -->
-    <script async src="https://cse.google.com/cse.js?cx=b09fcdac1f01b4622"></script>
-        
-    <!-- SEARCH CONTAINER -->
     <div class="search-wrapper">
+        <!-- Your Great Logo -->
+        <img class="logo-img" src="https://postimg.cc" alt="4 S-Engine Logo">
         
-        <!-- Logo Image -->
-        <img class="logo-img" src="https://i.postimg.cc/Hs2hsq3c/4-S-Engine-16-5-2026.png" alt="4 S-Engine Logo">
-      
-        <!-- Google Search Bar -->
-        <div class="gcse-search"></div>
-      
+        <!-- Clean, Centered Custom Search Bar -->
+        <form action="" method="get" class="custom-search-form">
+            <input type="text" name="q" placeholder="Search 4 S-Engine..." class="search-input">
+            <button type="submit" class="search-button">Search</button>
+        </form>
+
         <!-- Subtext -->
-        <h4 style="font-family: Trebuchet MS, sans-serif; color: #1b2516;"> 
+        <h4 style="font-family: Trebuchet MS, sans-serif; color: #1b2516; margin-top: 25px;"> 
             <em>...a search engine by Westmynster</em>
         </h4>
+
+        <!-- Google's Results Container (Hidden until user searches) -->
+        <div class="gcse-searchresults-only"></div>
     </div>
-    
-  </body>
+
+    <!-- The Correct Google Engine Script -->
+    <script async src="https://google.com"></script>
+</body>
+
 </html>
