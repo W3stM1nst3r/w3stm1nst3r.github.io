@@ -1,30 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=1024">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>4 S-Engine Home</title>
-    <style>
+        <style>
       /* ==========================================================================
-         1. BASE SYSTEM (Clean and Centered Everywhere)
+         1. THE UNIVERSAL DESKTOP LAYOUT (Desktop, Genio Laptop, and Mobile Base)
          ========================================================================== */
       body {
           background-color: #f1f6ef !important;
           font-family: Arial, sans-serif;
           text-align: center;
           margin: 0;
-          padding: 20px;
+          padding: 40px; /* Roomy desktop padding */
       }
 
-      /* Keeps the design wide and elegant so it doesn't squish on mobile */
+      /* This locks EVERYTHING into desktop mode across all three devices */
       .search-wrapper {
           width: 100%;
-          max-width: 750px; 
+          max-width: 750px; /* Wide desktop container width from your picture */
           margin: 0 auto;
           box-sizing: border-box;
       }
 
-      /* Big custom logo exactly like your drawing */
+      /* Massive custom logo that scales beautifully */
       .logo-img {
           width: 85% !important;     
           max-width: 420px !important; 
@@ -34,44 +33,41 @@
           display: inline-block;
       }
 
-      /* Forces the real Google CSE frame to stay aligned and wide */
-      #___gcse_0, .gcse-search {
+      /* Forces the real Google CSE elements to stay perfectly aligned and centered */
+      #___gcse_0, .gcse-search, .gsc-control-cse {
           width: 100% !important;
           max-width: 100% !important;
           margin: 0 auto !important;
-      }
-
-      /* ==========================================================================
-         2. FORCE GOOGLE TO ALIGN PERFECTLY WITH THE LOGO
-         ========================================================================== */
-      /* Wipes out Google's default uneven border box padding */
-      .gsc-control-cse, .gsc-control-cse * {
-          box-sizing: border-box !important;
-      }
-
-      /* Centers Google's invisible background grid */
-      .gsc-control-cse {
+          padding: 0 !important;
           background-color: transparent !important;
           border: none !important;
-          padding: 0 !important;
+      }
+
+      /* Fixes Google's unaligned text-input table cells */
+      table.gsc-search-box {
           margin: 0 auto !important;
           width: 100% !important;
       }
 
-      /* Centers the actual form block */
-      form.gsc-search-box, table.gsc-search-box {
-          margin: 0 auto !important;
-          width: 100% !important;
-      }
-
-      /* Removes the default right-side padding gap Google adds to the input box */
       td.gsc-input {
-          padding-right: 0 !important;
+          padding-right: 0 !important; /* Strips Google's uneven side gap */
       }
 
-      /* Centers the magnifying glass button inside its cell */
-      td.gsc-search-button {
-          vertical-align: middle !important;
+
+      /* ==========================================================================
+         2. THE EXTRA MOBILE ZOOM SNIPPET (Only active on phone screens)
+         ========================================================================== */
+      @media screen and (max-width: 767px) {
+          html {
+              /* Zooms the desktop layout on phones to match your drawing */
+              zoom: 115% !important; 
+              -moz-transform: scale(1.15); /* Firefox backup scale fix */
+              -moz-transform-origin: top center;
+          }
+          
+          body {
+              padding: 15px; /* Slightly closer to the edges on phone screens */
+          }
       }
     </style>
   </head>
