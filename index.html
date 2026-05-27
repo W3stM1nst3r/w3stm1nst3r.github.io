@@ -4,136 +4,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>4 S-Engine Home</title>
         <style>
-      /* ==========================================================================
-         1. THE UNIVERSAL DESKTOP LAYOUT (Desktop, Genio Laptop, and Mobile Base)
-         ========================================================================== */
-      body {
-          background-color: #f1f6ef !important;
-          font-family: Arial, sans-serif;
-          text-align: center;
-          margin: 0;
-          padding: 40px; /* Roomy desktop padding */
-      }
-
-      /* This locks EVERYTHING into desktop mode across all three devices */
-      .search-wrapper {
-          width: 100%;
-          max-width: 750px; /* Wide desktop container width from your picture */
-          margin: 0 auto;
-          box-sizing: border-box;
-      }
-
-      /* Massive custom logo that scales beautifully */
-      .logo-img {
-          width: 85% !important;     
-          max-width: 420px !important; 
-          height: auto !important;
-          margin-top: 30px;
-          margin-bottom: 20px;
-          display: inline-block;
-      }
-
-      /* Forces the real Google CSE elements to stay perfectly aligned and centered */
-      #___gcse_0, .gcse-search, .gsc-control-cse {
-          width: 100% !important;
-          max-width: 100% !important;
-          margin: 0 auto !important;
-          padding: 0 !important;
-          background-color: transparent !important;
-          border: none !important;
-      }
-
-      /* Fixes Google's unaligned text-input table cells */
-      table.gsc-search-box {
-          margin: 0 auto !important;
-          width: 100% !important;
-      }
-
-      td.gsc-input {
-          padding-right: 0 !important; /* Strips Google's uneven side gap */
-      }
-
-
-      /* ==========================================================================
-         2. THE EXTRA MOBILE ZOOM SNIPPET (Only active on phone screens)
-         ========================================================================== */
-      @media screen and (max-width: 767px) {
-          html {
-              /* Zooms the desktop layout on phones to match your drawing */
-              zoom: 115% !important; 
-              -moz-transform: scale(1.15); /* Firefox backup scale fix */
-              -moz-transform-origin: top center;
-          }
-          
-          body {
-              padding: 15px; /* Slightly closer to the edges on phone screens */
-          }
-        /* ==========================================================================
-   WIPE AWAY ONLY THE BOX THINGY
+/* ==========================================================================
+   4 S-ENGINE FRESH RESTART: PERFECT CENTERING & BACKGROUND ONLY
    ========================================================================== */
-.gsc-webResult.gsc-result, 
-.gsc-results .gsc-imageResult,
-.gsc-webResult {
-    background-color: transparent !important;
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none 
+
+/* 1. Sets background color and centers everything on the screen */
+body {
+    background-color: #f1f6ef !important;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+    
+    /* Flexbox layout to force perfect centering down the middle */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
 }
-        /* ==========================================================================
-   FORCE WIPE THE REFINEMENT TABS BACKGROUND & INTER-RESULT LINES
-   ========================================================================== */
-/* 1. Kills the background box behind Ebay, Amazon, TikTok, YouTube links */
-.gsc-tabsArea, 
-.gsc-tabsAreaV2, 
-.gsc-refinementHeader, 
-.gsc-refinementHeaderV2,
-.gsc-results-wrapper-visible > div,
-[role="tablist"] {
-    background: transparent !important;
+
+/* 2. Keeps your layout container perfectly centered and sized */
+.search-wrapper {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 3. Forces Google's outer framework boxes to align perfectly straight */
+#___gcse_0, 
+.gcse-search, 
+.gsc-control-cse {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
     background-color: transparent !important;
     border: none !important;
-    box-shadow: none !important;
 }
 
-/* 2. Kills the gray divider lines running between individual search results */
-.gsc-webResult, 
-.gsc-result, 
-.gsc-imageResult,
-.gsc-results,
-.gsc-webResult.gsc-result {
-    border: none !important;
-    border-bottom: none !important;
-    border-top: none !important;
-    box-shadow: none !important;
-}
-        /* ==========================================================================
-   PERFECT CENTERING ALIGNMENT (Fixes the off-center micro-gaps)
-   ========================================================================== */
-/* Fixes the uneven 16px right-side margin that shifts the bar to the left */
-.gsc-search-box-tools .gsc-search-box {
-    padding-right: 0 !important;
-    margin-right: 0 !important;
-    margin-left: 0 !important;
+/* 4. Fixes Google's crooked table offsets so the search bar sits dead center */
+table.gsc-search-box {
+    margin: 0 auto !important;
     width: 100% !important;
 }
 
-/* Forces the input field container to span perfectly evenly */
 td.gsc-input {
-    padding-right: 0 !important;
-    margin: 0 !important;
+    padding-right: 0 !important; /* Removes the hidden gap that makes it crooked */
 }
-
-/* Aligns the search container's main boundary box straight down the middle */
-.gsc-control-cse {
-    padding: 0 !important;
-    margin: 0 auto !important;
-}
-
-/* Centers the Google branding text if it appears under the input bar */
-.gcsc-branding {
-    display: none !important; /* Hides the uneven Google logo label entirely */
-}
-      }
     </style>
   </head>
   <body>
