@@ -4,33 +4,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>4 S-Engine Home</title>
         <style>
-  /* 1. Sets your green background and centers the base page layout */
-  body {
-      background-color: #f1f6ef !important;
-      margin: 0;
-      padding: 40px 20px;
-      text-align: center; /* Centers your logo and text */
-  }
+/* ==========================================================================
+   4 S-ENGINE BASICS: BACKGROUND & PERFECT GOOGLE BAR CENTERING
+   ========================================================================== */
 
-  /* 2. Forces your search box container to align straight down the center line */
-  .search-wrapper {
-      width: 100%;
-      max-width: 700px; /* Standard wide desktop width */
-      margin: 0 auto;  /* Centers the block container horizontally */
-  }
+/* 1. Sets background color and centers the base text flow */
+body {
+    background-color: #f1f6ef !important;
+    text-align: center;
+    margin: 0;
+    padding: 40px 20px;
+}
 
-  /* 3. Forces Google's hidden framework tables to align perfectly center */
-  #___gcse_0, .gcse-search, .gsc-control-cse, table.gsc-search-box {
-      width: 100% !important;
-      max-width: 100% !important;
-      margin: 0 auto !important; /* Wipes out any crooked left/right leaning */
-      padding: 0 !important;
-  }
+/* 2. Standard layout wrapper centered horizontally */
+.search-wrapper {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
 
-  /* 4. Fixes the invisible right-side gap that makes the bar look crooked */
-  td.gsc-input {
-      padding-right: 0 !important;
-  }
+/* 3. Forces the real Google framework structures to align dead center */
+#___gcse_0, 
+.gcse-search, 
+.gsc-control-cse, 
+table.gsc-search-box {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: none !important;
+}
+
+/* 4. Erases the asymmetrical side gap that makes the input row lean left */
+td.gsc-input {
+    padding-right: 0 !important;
+}
     </style>
   </head>
  <body>
