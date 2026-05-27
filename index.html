@@ -57,24 +57,29 @@ td.gsc-input {
     </style>
   </head>
   <body>
-    
-    <!-- YOUR REAL GOOGLE ENGINE SCRIPT -->
-    <script async src="https://cse.google.com/cse.js?cx=b09fcdac1f01b4622"></script>
-        
-    <!-- SEARCH CONTAINER -->
+
     <div class="search-wrapper">
-        
-        <!-- YOUR REAL LOGO IMAGE -->
+        <!-- 1. Your Logo Graphic -->
         <img class="logo-img" src="https://i.postimg.cc/Hs2hsq3c/4-S-Engine-16-5-2026.png" alt="4 S-Engine Logo">
-      
-        <!-- REAL GOOGLE SEARCH BAR -->
-        <div class="gcse-search"></div>
-      
-        <!-- YOUR SUBTEXT -->
-        <h4 style="font-family: Trebuchet MS, sans-serif; color: #1b2516; margin-top: 25px;"> 
+        
+        <!-- 2. Clean, Custom Search Bar (Perfectly Centered and Aligned) -->
+        <form action="" method="get" class="custom-search-form">
+            <input type="text" name="q" placeholder="Search 4 S-Engine..." class="search-input">
+            <button type="submit" class="search-button">Search</button>
+        </form>
+
+        <!-- 3. Your Footer Label Text -->
+        <h4 class="footer-text"> 
             <em>...a search engine by Westmynster</em>
         </h4>
+
+        <!-- 4. Real Google Results Area (Kept hidden until you search) -->
+        <div class="gcse-searchresults-only"></div>
     </div>
-    
-  </body>
+
+    <!-- The Correct Google Engine Script Link -->
+    <script async src="https://cse.google.com/cse.js?cx=b09fcdac1f01b4622"></script>
+
+</body>
+
 </html>
