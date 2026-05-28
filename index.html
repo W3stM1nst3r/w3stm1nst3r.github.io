@@ -4,71 +4,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>4 S-Engine Home</title>
         <style>
-/* Custom logo sizing - wide on mobile, clean on desktop */
+/* ==========================================================================
+   4 S-ENGINE MASTER ALL-IN-ONE SNIPPET (BACKGROUND + CENTER EVERYTHING)
+   ========================================================================== */
+
+/* 1. Sets your green background and page centering */
+body {
+    background-color: #f1f6ef !important;
+    text-align: center !important;
+    margin: 0;
+    padding: 30px 15px;
+}
+
+/* 2. Standard page container layout centering */
+.search-wrapper {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto !important;
+    text-align: center !important;
+}
+
+/* 3. Your custom logo sizing layout */
 .logo-img {
     width: 85% !important;     
     max-width: 420px !important; 
     height: auto !important;
     margin-top: 30px;
     margin-bottom: 20px;
-    display: inline-block; 
+    display: inline-block;
 }
 
-/* Wipes out all the dirty background boxes around the Google bar */
-#___gcse_0, .gcse-search, .gsc-control-cse {
-    background-color: transparent !important;
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    padding: 0 !important;
-    margin: 0 auto !important;
-}
-
-/* Centers the inner table perfectly under your logo */
-table.gsc-search-box {
-    margin: 0 auto !important;
+/* 4. Centers the main Google search input bar container */
+#___gcse_0, .gcse-search, .gsc-control-cse, .gsc-search-box-tools .gsc-search-box {
     width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    background-color: transparent !important;
+    border: none !important;
 }
 
-/* Fixes the crooked right-side padding gap */
+/* Wipes out the uneven right gap that makes the input bar crooked */
 td.gsc-input {
     padding-right: 0 !important;
 }
-          /* THE MIDDLE ALIGNMENT SNIPPET */
-body {
-    text-align: center !important;
-}
 
-.search-wrapper {
-    margin: 0 auto !important;
-    text-align: center !important;
-}
-          /* ==========================================================================
-   THE SEARCH BAR AND RESULTS PERFECT CENTER SNIPPET
-   ========================================================================== */
-/* Centers the inner search bar input elements */
-.gsc-search-box-tools .gsc-search-box {
-    margin: 0 auto !important;
-    width: 100% !important;
-}
-
-/* Centers the refinement tabs links (Ebay, Amazon, YouTube) */
+/* 5. Centers the navigation tabs row (Ebay, Amazon, YouTube) */
 .gsc-tabsArea, .gsc-tabsAreaV2, [role="tablist"] {
     display: flex !important;
     justify-content: center !important;
     margin: 0 auto 15px auto !important;
 }
 
-/* Centers the search results content blocks underneath */
+/* 6. Centers the main results alignment frame */
 .gsc-results-wrapper-visible, .gsc-results, .gsc-webResult {
     text-align: center !important;
     margin: 0 auto !important;
     width: 100% !important;
 }
 
-/* Forces individual result snippets to text-align cleanly */
+/* Keeps individual text results readable while aligned down the middle */
 .gs-webResult, .gs-result {
-    text-align: left !important; /* Keeps actual text readable while centered */
+    text-align: left !important; 
     margin: 0 auto 15px auto !important;
     max-width: 600px !important;
 }
