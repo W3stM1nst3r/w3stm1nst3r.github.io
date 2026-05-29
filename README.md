@@ -1,4 +1,4 @@
- <h1 align="center">w3stm1nst3r.github.io</h1>
+<h1 align="center">w3stm1nst3r.github.io</h1>
 
 <p align="center">...a search engine by Westmynster</p>
 
